@@ -70,3 +70,36 @@ a{
     color: black;
 }
 
+.swal-overlay {
+    background-color: rgba(0, 0, 0, 0.5) !important;
+  }
+
+
+.swal-title {
+    padding-top: 10px!important;
+    padding-bottom: 10px!important;
+    color: red;
+    margin: 0px !important;
+    font-size: 16px !important;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.21) !important;
+    margin-bottom: 28px !important;
+}
+
+.swal-button {
+position: relative !important;
+margin-right: 15px !important;
+margin-bottom: 10px !important;
+padding: 7px 19px !important;
+border-radius: 5px !important;
+background-color: #4962B3 !important;
+font-size: 12px !important;
+border: 1px solid #3e549a !important;
+text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.3) !important;
+}
+
+
+/* .swal{
+margin-left: 300px !important;
+margin-bottom: 30px !important;
+margin-top: 30px !important;
+} */
