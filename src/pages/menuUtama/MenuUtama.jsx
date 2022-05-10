@@ -1,8 +1,12 @@
 import React from 'react'
+import Navbar from '../../components/navbar/Navbar'
 
 function MenuUtama() {
   return (
-    <div>MenuUtama</div>
+    <div>
+      <Navbar/>
+      <p>Masuk ke MenuUtama</p>
+    </div>
   )
 }
 

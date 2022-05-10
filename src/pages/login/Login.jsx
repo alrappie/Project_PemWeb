@@ -1,21 +1,74 @@
-import React from "react";
+import React, { useState } from "react";
 import {BrowserRouter as Router, Route, Routes, Link} from "react-router-dom";
+import MenuUtama from '../menuUtama/MenuUtama';
+import swal from "sweetalert";
 
 // import '../umum.css';
 
-const Login = () =>{
+function Login () {
+
+    const adminUser = {
+        email: 'alravimahesa@gmail.com',
+        password : 'password'
+      };
+
+      const [user, setUser] = useState('');
+      const [pwd, setPwd] = useState('');
+      const [errMsg,setErrMsg] = useState('');
+      const [success,setSuccess] = useState(false);
+
+      const handleSubmit = async (e) =>{
+          e.preventDefault();
+          if (user === adminUser.email && pwd === adminUser.password){
+            setUser('');
+            setPwd('');
+            setSuccess(true);
+          }else{
+            setUser('');
+            setPwd('');
+            swal({
+                title: "Terjadi Kesalahan!",
+                text: "Email atau Password Anda Salah!",
+                // icon: "error",
+                // button: "Ok",
+              });
+          }
+      }
+    
     return (
+        <>
+{success ? (
+     <MenuUtama/>
+):(
         <div class="row">
         <div class="col s12 m12 l6">
           <div class="masuk_text">
               <h3>Masuk</h3>
-              <form action="" method="">
-                  <input type="email" placeholder="Email" class="browser-default input" name="email" required></input>
-                  <br></br>
-                  <input type="password" placeholder="Password" class="browser-default input" name="password" required></input>
-                  <br></br>
-                  <input type="submit" class="browser-default tombolsubmit" value="Masuk"></input>
-              </form>
+              <form onSubmit={handleSubmit}>
+                <input 
+                    type="email" 
+                    placeholder="Email" 
+                    className="browser-default input" 
+                    name="email" 
+                    id='email' 
+                    onChange={(e) => setUser(e.target.value)}
+                    value = {user}
+                    required>
+                </input>
+                <br></br>
+                <input 
+                    type="password" 
+                    placeholder="Password" 
+                    className="browser-default input" 
+                    name="password" 
+                    id='password' 
+                    onChange={(e) => setPwd(e.target.value)}
+                    value = {pwd}
+                    required>
+                </input>
+                <br></br>
+                <input type="submit" className="browser-default tombolsubmit" value="Masuk"></input>
+                </form>
               <p>Belum memiliki akun? <Link to="/daftar">Daftar</Link></p>
           </div>
         </div>
@@ -29,6 +82,8 @@ const Login = () =>{
           </div>
         </div>
     </div>
+    )}
+    </>
     )
 }
 

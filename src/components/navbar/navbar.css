@@ -1,0 +1,13 @@
+.nav{
+    font-size: 2rem !important;
+    padding-top: 1% !important;
+    padding-left: 4% !important;
+    padding-bottom: 1% !important;
+    color: #7969E8;
+    /* text-decoration: underline !important; */
+    border-bottom: 1px solid rgb(111, 111, 111) !important;
+}
+
+.red{
+    color: #A99DFF;
+}
