@@ -1,38 +1,71 @@
-.App {
-  text-align: center;
+*{
+    margin: 0 !important;
+    border: 0 !important;
+    padding: 0 !important;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.image_alun{
+    background: url('assets/gambar_alun2_login.png');
+    background-size: cover;
+    background-position-y: 100%;
+    width: 100wh;
+    height: 100vh;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.image_text{
+    color: white;
+    text-align: center;
+    position: relative;
+    top: 10%;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.image_text h5{
+    padding-top: 8px !important;
 }
 
-.App-link {
-  color: #61dafb;
+.masuk_text{
+    position: relative;
+    top: 25vh;
+    left: 9vh;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.masuk_text h3{
+    color: #6354C8;
+    margin-bottom: 25px !important;
+
 }
+
+.input
+{    
+    margin-top: 15px !important;
+    font-family: 'Lexend', sans-serif;
+    border: 2px solid #7969E8 !important;
+    width: 20vw !important;
+    height: 40px  !important;
+    box-sizing: border-box !important;
+    border-radius: 6.5px !important;
+    outline: none;
+    padding: 10px 10px 10px 10px !important;
+}
+
+.tombolsubmit{
+    margin-top: 15px !important;
+    font-family: 'Lexend', sans-serif;
+    border: 2px solid #7969E8 !important;
+    width: 20vw !important;
+    height: 40px  !important;
+    box-sizing: border-box !important;
+    border-radius: 6.5px !important;
+    outline: none;
+    padding: 10px 10px 10px 10px !important;
+    margin-top: 15px !important;
+    background-color: #8B7FDF;
+    color: white;
+    margin-bottom: 10px!important;
+}
+
+a{
+    text-decoration: underline;
+    color: black;
+}
+
