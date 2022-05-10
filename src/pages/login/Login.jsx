@@ -10,9 +10,9 @@ const Login = () =>{
           <div class="masuk_text">
               <h3>Masuk</h3>
               <form action="" method="">
-                  <input type="email" placeholder="email" class="browser-default input" name="email" required></input>
+                  <input type="email" placeholder="Email" class="browser-default input" name="email" required></input>
                   <br></br>
-                  <input type="password" placeholder="password" class="browser-default input" name="password" required></input>
+                  <input type="password" placeholder="Password" class="browser-default input" name="password" required></input>
                   <br></br>
                   <input type="submit" class="browser-default tombolsubmit" value="Masuk"></input>
               </form>

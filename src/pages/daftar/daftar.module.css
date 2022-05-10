@@ -13,4 +13,9 @@
 .masuk_text h3{
     color: #6354C8;
     margin-bottom: 30px !important;
+    font-weight: bold;
+}
+
+h3{
+    font-weight: bold;
 }
