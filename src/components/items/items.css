@@ -1,0 +1,65 @@
+.card{
+    margin-top: 30px !important;
+    position: relative;
+    width: 230px !important;
+    height: 300px !important;
+    top: 10vh;
+    background-color: black;
+    border-radius: 10px;
+    float: left !important;
+    margin-right: 30px !important;
+}
+
+.card img{
+    position: relative;
+    height: 300px !important;
+    object-fit: cover !important;
+    border-radius: 10px !important;
+    display: block;
+    object-position:9%;
+    opacity: .6;
+}
+
+.card img:hover{
+    opacity: .9;
+}
+
+.card-title{
+    position: absolute;
+    top: 3vh;
+    left: 1.3vw;
+    color: white;
+}
+
+.card-car-name{
+    position: absolute;
+    top: 26vh;
+    left: 1.3vw;
+    font-size: 1.5rem;
+    color: white;
+}
+
+.card-car-price{
+    position: absolute;
+    top: 83%;
+    left: 1.3vw;
+    font-size: 1.5rem;
+    color: white;
+}
+
+.card-car-cc{
+    position: absolute;
+    top: 70%;
+    left: 76%;
+    color: white;
+    font-size: .8rem;
+}
+
+.price-hari{
+    font-size: .9rem;
+}
+
+.card p:nth-child(2){
+    margin-left: 3px !important;
+    font-weight: bolder;
+}

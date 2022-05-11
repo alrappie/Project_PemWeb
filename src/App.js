@@ -1,5 +1,5 @@
 import React from 'react';
-import { Login,Daftar,Error,MenuUtama } from './pages';
+import { Login,Daftar,Error,MenuUtama,DetailPenyewaan } from './pages';
 import {BrowserRouter as Router, Route, Routes} from "react-router-dom";
 import './App.css'
 
@@ -10,13 +10,14 @@ function App() {
     <Router>
       <Routes>
         <Route path='/login' element={<Login/>}/>
-        <Route path='/menu' element={<MenuUtama/>}/>
         <Route path='/daftar' element={<Daftar/>}/>
+        <Route path='/menu' exact element={<MenuUtama/>}/> 
+        <Route path='/detail-penyewaan/:mobil/:harga' element={<DetailPenyewaan/>}/> 
         <Route path='/' exact element={<Login/>}/>
         <Route path='*' element={<Error/>}/>
       </Routes>
     </Router>
   );
 }
-
+/*authorized={false}*/
 export default App;
