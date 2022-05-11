@@ -18,10 +18,7 @@
     text-align: center;
     position: relative;
     top: 10%;
-}
-
-.image_text h5{
-    padding-top: 8px !important;
+    /* font-size: 18px !important; */
 }
 
 .masuk_text{
@@ -30,10 +27,20 @@
     left: 9vh;
 }
 
+.image_text h5{
+    padding-top: 8px !important;
+    font-size: 30px !important;
+}
+
+.image_text h3{
+    /* padding-top: 8px !important; */
+    font-size: 40px !important;
+}
+
+
 .masuk_text h3{
     color: #6354C8;
     margin-bottom: 25px !important;
-
 }
 
 .input

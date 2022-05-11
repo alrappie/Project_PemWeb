@@ -39,7 +39,6 @@ function Items() {
   return (
       <>
           {cardInfo.map(renderCard)}
-  );
       </>
   )
 }
