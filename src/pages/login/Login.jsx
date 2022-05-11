@@ -1,11 +1,12 @@
 import React, { useState } from "react";
-import {BrowserRouter as Router, Route, Routes, Link} from "react-router-dom";
+import {BrowserRouter as Router, Route, Routes, Link, Navigate} from "react-router-dom";
 import MenuUtama from '../menuUtama/MenuUtama';
 import swal from "sweetalert";
-
+import {useNavigate} from 'react-router-dom';
 // import '../umum.css';
 
 function Login () {
+    let history = useNavigate();
 
     const adminUser = {
         email: 'alravimahesa@gmail.com',
@@ -14,7 +15,6 @@ function Login () {
 
       const [user, setUser] = useState('');
       const [pwd, setPwd] = useState('');
-      const [errMsg,setErrMsg] = useState('');
       const [success,setSuccess] = useState(false);
 
       const handleSubmit = async (e) =>{
@@ -23,26 +23,21 @@ function Login () {
             setUser('');
             setPwd('');
             setSuccess(true);
+            return history('/menu');
+
           }else{
-            setUser('');
-            setPwd('');
             swal({
                 title: "Terjadi Kesalahan!",
                 text: "Email atau Password Anda Salah!",
-                // icon: "error",
-                // button: "Ok",
-              });
+                
+            });
+            
           }
       }
-    
     return (
-        <>
-{success ? (
-     <MenuUtama/>
-):(
-        <div class="row">
-        <div class="col s12 m12 l6">
-          <div class="masuk_text">
+        <div className="row">
+        <div className="col s12 m12 l6">
+          <div className="masuk_text">
               <h3>Masuk</h3>
               <form onSubmit={handleSubmit}>
                 <input 
@@ -73,17 +68,15 @@ function Login () {
           </div>
         </div>
 
-        <div class="col s12 m12 l6">
-          <div class="image_alun">
-              <div class="image_text">
+        <div className="col s12 m12 l6">
+          <div className="image_alun">
+              <div className="image_text">
                   <h3>Butuh Mobil Di Malang?</h3>
                   <h5>Sewa disini aja!</h5>
               </div>
           </div>
         </div>
     </div>
-    )}
-    </>
     )
 }
 

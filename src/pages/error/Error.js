@@ -1,9 +1,10 @@
 import React from 'react'
+import errorCss from './error.module.css';
 
 function error() {
   return (
     <div>
-        <h1>Error Page!</h1>
+        <h1 className={errorCss.error}>Error Page!</h1>
     </div>
   )
 }

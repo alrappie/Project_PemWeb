@@ -1,0 +1,13 @@
+h1{
+    position: relative;
+    color: #6354C8;
+    top: 10vh;
+    left: 32% !important;
+    font-size: 3rem;
+    display: inline;
+    margin-bottom: 10vh !important;
+}
+
+.margin_ke_kanan{
+    margin-left: 140px !important;
+}
