@@ -9,7 +9,7 @@ function Login () {
     let history = useNavigate();
 
     const adminUser = {
-        email: 'alravimahesa@gmail.com',
+        nomor: '081310887676',
         password : 'password'
       };
 
@@ -19,7 +19,7 @@ function Login () {
 
       const handleSubmit = async (e) =>{
           e.preventDefault();
-          if (user === adminUser.email && pwd === adminUser.password){
+          if (user === adminUser.nomor && pwd === adminUser.password){
             setUser('');
             setPwd('');
             setSuccess(true);
@@ -28,7 +28,7 @@ function Login () {
           }else{
             swal({
                 title: "Terjadi Kesalahan!",
-                text: "Email atau Password Anda Salah!",
+                text: "Nomor HP atau Password Anda Salah!",
                 
             });
             
@@ -41,11 +41,11 @@ function Login () {
               <h3>Masuk</h3>
               <form onSubmit={handleSubmit}>
                 <input 
-                    type="email" 
-                    placeholder="Email" 
+                    type="number" 
+                    placeholder="Nomor HP" 
                     className="browser-default input" 
-                    name="email" 
-                    id='email' 
+                    name="nomorHP" 
+                    id='nomorHP' 
                     onChange={(e) => setUser(e.target.value)}
                     value = {user}
                     required>
