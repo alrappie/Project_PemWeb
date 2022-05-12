@@ -2,11 +2,9 @@ import React from 'react'
 import './items.css';
 import {useNavigate} from 'react-router-dom';
 import {BrowserRouter as Router, Route, Routes} from "react-router-dom";
-import { DetailPenyewaan } from '../../pages';
 
 function Items() {
     const navigate = useNavigate();
-
 
     const cardInfo = [
         {image: require('../../assets/image1.jpg'),dMobil : 'Honda', bMobil: 'CRV', sisa:3, harga:'Rp. 300.000',cc:'1.300cc'},
@@ -17,7 +15,7 @@ function Items() {
 
     const renderCard = (card,index) =>{
         return (
-            <div className='card' key={index} onClick={()=>navigate('/detail-penyewaan/'+card.dMobil+'-'+card.bMobil+'/'+card.harga)}>
+            <div className='card' key={index} onClick={()=>navigate('/detail-penyewaan/'+card.dMobil+' - '+card.bMobil+'/'+card.harga)}>
             <img src={card.image}/> 
             <div className='card-title'>
                 <p>Sisa {card.sisa}</p>

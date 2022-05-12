@@ -1,8 +1,12 @@
 import React, { useState } from "react";
 import { useParams } from 'react-router-dom'
 import swal from "sweetalert";
+import Navbar from "../../components/navbar/Navbar";
+import detailPenyewaanCss from './detailpenyewaan.module.css';
+import { useNavigate } from 'react-router-dom';
 
 function DetailPenyewaan() {
+  const navigate = useNavigate();
 
     let {mobil,harga} = useParams();
     const [tglPeminjaman, setTglPeminjaman] = useState('');
@@ -23,34 +27,33 @@ function DetailPenyewaan() {
       setTglPengembalian('');
       return 'Pilih tanggal';
     }
-    return (selisihHari+1+selisihBulan*30);
+    return selisihHari+1+selisihBulan*30;
   }
   let dollarUSLocale = Intl.NumberFormat('en-US');
 
   return (
-    <div>
-        Mobil : {mobil}
+    <>
+      <Navbar/>
+      <div className={detailPenyewaanCss.container}>
+          <div className={detailPenyewaanCss.detail_penyewaan}>Detail Penyewaan</div>
+          <p className={detailPenyewaanCss.mobil_title}>Mobil : {mobil}</p> 
+          <form>
+          <label className={detailPenyewaanCss.label}>Tanggal Peminjaman</label>
+          <br></br>
+          <input type='date' onChange={(e) => setTglPeminjaman(e.target.value)} value={tglPeminjaman} className={detailPenyewaanCss.date} required></input>
+          <br></br>
+          <label className={detailPenyewaanCss.label}>Tanggal Pengembalian</label>
+          <br></br>
+          <input type='date' onChange={(e) => setTglPengembalian(e.target.value)} value={tglPengembalian} className={detailPenyewaanCss.date} required></input>
+          <br></br>
+          <br></br>
+          <p>Harga Penyewaan : {harga} x {konversi()} hari</p>
+          <p>Total : Rp {(dollarUSLocale.format(harga.substring(3).replace('.','')*konversi())).toString().replaceAll(',','.')} </p>          
+          <input type='submit' className={detailPenyewaanCss.tombolsubmit} value='Kirim' onClick={()=>navigate('/riwayat')}></input>
+          </form>
+      </div>
 
-        <br></br>
-        <form>
-        <label>Tanggal Peminjaman</label>
-        <br></br>
-        <input type='date' onChange={(e) => setTglPeminjaman(e.target.value)} value={tglPeminjaman} required></input>
-        <br></br>
-        <label>Tanggal Pengembalian</label>
-        <br></br>
-        <input type='date' onChange={(e) => setTglPengembalian(e.target.value)} value={tglPengembalian} required></input>
-        <br></br>
-        Harga Penyewaan : {harga} x {konversi()} hari
-        <br></br>
-        Total : Rp {(dollarUSLocale.format(harga.substring(3).replace('.','')*konversi())).toString().replaceAll(',','.')} 
-        <br></br>
-        <input type='submit' className="browser-default tombolsubmit"></input>
-        </form>
-
-
-
-    </div>
+    </>
   )
 }
 
