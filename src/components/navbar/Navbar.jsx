@@ -1,6 +1,6 @@
 import React from 'react'
 import './navbar.css'
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 function Navbar() {
 const navigate = useNavigate();
@@ -8,11 +8,13 @@ const navigate = useNavigate();
   return (
     <nav className='nav'>
       <div className='logo'>
-      Mobil<span className='red'>Malang</span>
+      <Link className='c' to={'/menu'}>
+        Mobil<span className='red'>Malang</span>
+      </Link>
       </div>
       <div className='nav-others'>
-        Profil
-        Riwayat
+        <Link className='a' to={'/profil'}>Profil</Link>
+        <Link className='b' to={'/riwayat'}>Riwayat</Link>
       </div>
       <button  className='keluar' onClick={()=>navigate('/login')}>keluar</button >
     </nav>

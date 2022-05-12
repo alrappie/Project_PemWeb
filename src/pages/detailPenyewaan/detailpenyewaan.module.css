@@ -1,0 +1,46 @@
+.container{
+    margin-left: 9% !important;
+}
+
+.detail_penyewaan{
+    margin-top: 7% !important;
+    margin-bottom: 2% !important;
+    color: #6354C8;
+    font-size: 36px;
+}
+
+.mobil_title{
+    font-weight:600;
+}
+
+.label{
+    margin-top: 10px !important;
+    /* margin-bottom: 10px !important; */
+}
+
+.date{
+    text-align: center;
+    border: 1px solid black !important;
+    border-radius: 5px;
+    padding: 3px !important;
+    width: 280px;
+}
+
+.tombolsubmit{
+    font-family: 'Lexend', sans-serif;
+    border: 2px solid #7969E8 !important;
+    width: 10vw !important;
+    height: 40px  !important;
+    box-sizing: border-box !important;
+    border-radius: 6.5px !important;
+    outline: none;
+    margin-top: 15px !important;
+    background-color: #8B7FDF;
+    color: white;
+    margin-bottom: 10px!important;
+    
+}
+
+.tombolsubmit:hover{
+    opacity: .9;
+}

@@ -24,7 +24,7 @@
     position: relative;
     display: inline !important;
     font-size: 1.5rem !important;
-    margin-left: 58% !important;
+    margin-left: 54% !important;
     word-spacing: 30px;
 }
 
@@ -33,7 +33,7 @@
     display: inline !important;
     box-sizing: border-box !important;
     font-size: 1.4rem !important;
-    margin-left: 3% !important;
+    margin-left: 1% !important;
     background-color:#B54949;
     color: white;
     padding-top: 3px !important;
@@ -42,3 +42,21 @@
     border-radius: 5px !important;
     
 }
+
+.a{
+    margin-right: 20px !important;
+    text-decoration: none !important;
+    color: #7969E8 !important;
+}
+
+.b{
+    margin-right: 20px !important;
+    text-decoration: none !important;
+    color: #7969E8 !important;
+}
+
+.c{
+    text-decoration: none !important;
+    color: #7969E8 !important;
+}
+
