@@ -5,8 +5,8 @@ import DaftarCSS from './daftar.module.css';
 
 const Daftar = () =>{
     return (
-        <div class="row">
-        <div class="col s12 m12 l6">
+        <div className="row">
+        <div className="col s12 m12 l6">
           <div className={DaftarCSS.masuk_text}>
               <h3>Daftar</h3>
               <form action="" method="">
@@ -23,13 +23,13 @@ const Daftar = () =>{
 
                   <input type="submit" className="browser-default tombolsubmit" value="Daftar"></input>
               </form>
-              <p>Sudah memiliki akun? <Link to="/login">Masuk</Link></p>
+              <p>Sudah memiliki akun? <Link to="/user/login/">Masuk</Link></p>
           </div>
         </div>
 
-        <div class="col s12 m12 l6">
-          <div class="image_alun">
-              <div class="image_text">
+        <div className="col s12 m12 l6">
+          <div className="image_alun">
+              <div className="image_text">
                   <h3>Butuh Mobil Di Malang?</h3>
                   <h5>Sewa disini aja!</h5>
               </div>
