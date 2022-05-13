@@ -29,6 +29,7 @@
 }
 
 .keluar{
+    text-decoration: none !important;
     position: relative;
     display: inline !important;
     box-sizing: border-box !important;
@@ -36,11 +37,10 @@
     margin-left: 1% !important;
     background-color:#B54949;
     color: white;
-    padding-top: 3px !important;
+    padding-top: 7px !important;
     padding-left: 10px !important;
     padding-right: 10px !important;
     border-radius: 5px !important;
-    
 }
 
 .a{
