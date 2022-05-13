@@ -1,5 +1,5 @@
 import React from 'react';
-import { Login,Daftar,Error,MenuUtama,DetailPenyewaan,Riwayat } from './pages';
+import { Login,Daftar,Error,MenuUtama,DetailPenyewaan,Riwayat,Profile} from './pages';
 import {BrowserRouter as Router, Route, Routes} from "react-router-dom";
 import './App.css'
 
@@ -14,7 +14,7 @@ function App() {
         <Route path='/user/menu' element={<MenuUtama/>}/> 
         <Route path='/detail-penyewaan/:mobil/:harga' element={<DetailPenyewaan/>}/> 
         <Route path='/riwayat' element={<Riwayat/>}/> 
-        {/* <Route path='/' exact element={<Login/>}/> */}
+        <Route path='/user' exact element={<Profile/>}/>
         <Route path='*' element={<Error/>}/>
       </Routes>
     </Router>
