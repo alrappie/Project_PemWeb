@@ -6,10 +6,12 @@ import { useState, React } from "react";
 import './profile.css';
 
 function Profile() {
+  let history = useNavigate();
   const [nama, setNama] = useState("");
   const [nik, setNik] = useState("");
   const [telp, setTelp] = useState("");
   const [kota, setkota] = useState("");
+  const [password, setpassword] = useState("");
 
   const config = {
     headers: {
@@ -26,6 +28,8 @@ function Profile() {
     },
     (err) => {
       console.log(err);
+      return history('/user/login');
+
     }
   );
 
@@ -33,6 +37,24 @@ function Profile() {
     <div>
       <Navbar />
       <div className="profile">Profile</div>
+      <form className="form_profile">
+        <label className="bold">Nama:</label>
+        <input type = 'text' value={nama} onChange={(e) => setNama(e.target.value)} className='label'></input>
+        <br></br>
+        <label className="bold">NIK:</label>
+        <input type = 'text' value={nik} onChange={(e) => setNik(e.target.value)} className='label'></input>
+        <br></br>
+        <label className="bold">Kotal Asal:</label>
+        <input type = 'text' value={kota} onChange={(e) => setkota(e.target.value)} className='label'></input>
+        <br></br>
+        {/* <label>Password:</label>
+        <input value={password} onChange={(e) => setpassword(e.target.value)}></input>
+        <br></br> */}
+        <label className="bold">No HP:</label>
+        <input type = 'text' value={telp} onChange={(e) => setTelp(e.target.value)} className='label'></input>
+        <br></br>
+        <input type='submit' className="profile_submit" value='ubah'></input>
+      </form>
     </div>
   );
 }

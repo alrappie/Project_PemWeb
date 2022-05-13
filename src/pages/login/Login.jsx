@@ -11,30 +11,8 @@ import swal from "sweetalert";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 
-// import '../umum.css';
-
 function Login() {
   let history = useNavigate();
-
-  // const adminUser = {
-  //     nomor: '081310887676',
-  //     password : 'password'
-  //   };
-
-  // if (user === adminUser.nomor && pwd === adminUser.password){
-  //   setUser('');
-  //   setPwd('');
-  //   setSuccess(true);
-  //   return history('/menu');
-
-  // }else{
-  //   swal({
-  //       title: "Terjadi Kesalahan!",
-  //       text: "Nomor HP atau Password Anda Salah!",
-
-  //   });
-
-  // }
 
   const [user, setUser] = useState("");
   const [pwd, setPwd] = useState("");

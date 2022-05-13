@@ -1,5 +1,46 @@
 .profile{
+    position: relative !important;
     color: #6354C8 ;
     font-size: 2.3rem;
-    
+    margin-left: 8.2% !important;
+    margin-top: 5%  !important;
+    font-weight: bold;
+}
+
+.form_profile{
+    margin-left: 8.2% !important;
+    margin-top: 2%  !important;
+}
+
+.label{
+    margin-bottom: 15px !important;
+    padding: 5px !important;
+    border: 1px solid black !important;
+    border-radius: 5px !important;
+}
+
+.label:nth-child(2){
+    margin-left: 3.73% !important;
+}
+.label:nth-child(5){
+    margin-left: 5.1% !important;
+}
+.label:nth-child(8){
+    margin-left: 1% !important;
+}
+.label:nth-child(11){
+    margin-left: 3.3% !important;
+}
+
+.bold{
+    font-weight: bold;
+}
+
+.profile_submit{
+    position: relative !important;
+    margin-top: 2% !important;
+    padding: 8px 20px 8px 20px !important;
+    background-color: #8B7FDF;
+    color: white;
+    border-radius: 5px !important;
 }

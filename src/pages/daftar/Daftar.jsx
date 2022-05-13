@@ -10,7 +10,7 @@ const Daftar = () =>{
           <div className={DaftarCSS.masuk_text}>
               <h3>Daftar</h3>
               <form action="" method="">
-                  <input type="email" placeholder="Email" className="browser-default input" name="email" required></input>
+                  <input type="text" placeholder="Nama" className="browser-default input" name="nama" required></input>
                   <br></br>
                   <input type="text" placeholder="NIK" className="browser-default input" name="NIK" required></input>
                   <br></br>
