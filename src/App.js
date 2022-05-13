@@ -9,12 +9,12 @@ function App() {
   return (
     <Router>
       <Routes>
-        <Route path='/login' element={<Login/>}/>
-        <Route path='/daftar' element={<Daftar/>}/>
-        <Route path='/menu' exact element={<MenuUtama/>}/> 
+        <Route path='/user/login' element={<Login/>}/>
+        <Route path='/user/register' element={<Daftar/>}/>
+        <Route path='/user/menu' element={<MenuUtama/>}/> 
         <Route path='/detail-penyewaan/:mobil/:harga' element={<DetailPenyewaan/>}/> 
         <Route path='/riwayat' element={<Riwayat/>}/> 
-        <Route path='/' exact element={<Login/>}/>
+        {/* <Route path='/' exact element={<Login/>}/> */}
         <Route path='*' element={<Error/>}/>
       </Routes>
     </Router>

@@ -16,7 +16,7 @@ const navigate = useNavigate();
         <Link className='a' to={'/profil'}>Profil</Link>
         <Link className='b' to={'/riwayat'}>Riwayat</Link>
       </div>
-      <button  className='keluar' onClick={()=>navigate('/login')}>keluar</button >
+      <Link  to = {'/user/login'} className='keluar' onClick={()=>localStorage.clear()}>keluar</Link >
     </nav>
   )
 }
